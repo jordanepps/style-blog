@@ -8,6 +8,7 @@ const Home = ({ allPosts }) => {
 
   useEffect(() => {
     setRecentPost(allPosts[0]);
+    setPosts(allPosts.slice(1));
   }, []);
 
   return (
@@ -21,6 +22,7 @@ const Home = ({ allPosts }) => {
 };
 
 export const getServerSideProps = async () => {
+  //Fetches for all posts in publishedAt descending order
   const query = `*[_type == "post"]| order(publishedAt desc){
       _id,
       body,

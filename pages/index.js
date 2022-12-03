@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import MostRecent from '../components/MostRecent';
+import PostContainer from '../components/PostContainer';
 import { client } from '../lib/client';
 
 const Home = ({ allPosts }) => {
@@ -14,9 +15,10 @@ const Home = ({ allPosts }) => {
   return (
     <div>
       {recentPost && <MostRecent recentPost={recentPost} />}
-      {posts?.map((post) => (
+      {/* {posts?.map((post) => (
         <div key={post?._id}>{post?.title}</div>
-      ))}
+      ))} */}
+      {posts && <PostContainer posts={posts} />}
     </div>
   );
 };

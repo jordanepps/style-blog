@@ -43,6 +43,11 @@ export default {
       type: 'datetime',
     },
     {
+      name: 'subText',
+      title: 'Sub Text',
+      type: 'string',
+    },
+    {
       name: 'body',
       title: 'Body',
       type: 'blockContent',

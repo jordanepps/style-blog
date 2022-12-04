@@ -1,12 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
 import { urlFor } from '../lib/client';
+import PublishedDate from './PublishedDate';
 
 const MostRecent = ({
   recentPost: { title, slug, mainImage, publishedAt, subText },
 }) => {
-  const postDate = new Date(publishedAt);
-  console.log(postDate.getDate());
   return (
     <div className="my-5">
       <h2 className="text-4xl font-display tracking-wide font-semibold pb-5">
@@ -30,12 +29,7 @@ const MostRecent = ({
         <p className="font-body row-start-3 col-span-4 text-2xl font-light">
           {subText}
         </p>
-
-        <div className="flex flex-col items-center font-display">
-          <span className="text-2xl">Dec</span>
-          <span className="text-xl">03</span>
-          <span className="text-lg">22</span>
-        </div>
+        <PublishedDate publishedAt={publishedAt} />
       </Link>
     </div>
   );

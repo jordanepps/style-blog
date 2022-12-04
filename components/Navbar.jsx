@@ -7,7 +7,7 @@ const Navbar = () => {
       <p className="text-3xl font-display tracking-widest">
         <Link href="/">The Style Blog</Link>
       </p>
-      <div className="flex gap-16 text-lg tracking-widest font-norma;">
+      <div className="flex gap-16 text-lg tracking-widest font-normal">
         <p>
           <Link href="/">Posts</Link>
         </p>

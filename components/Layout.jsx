@@ -10,13 +10,15 @@ const Layout = ({ children }) => {
       <Head>
         <title>Style Blog</title>
       </Head>
-      <header>
-        <Navbar />
-      </header>
-      <main>{children}</main>
-      <footer>
-        <Footer />
-      </footer>
+      <div className="mx-auto max-w-7xl px-3">
+        <header>
+          <Navbar />
+        </header>
+        <main>{children}</main>
+        <footer>
+          <Footer />
+        </footer>
+      </div>
     </div>
   );
 };

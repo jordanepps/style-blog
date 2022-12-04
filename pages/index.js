@@ -16,8 +16,8 @@ const Home = ({ allPosts }) => {
   return (
     <div>
       <HeroBanner />
-      {/* {recentPost && <MostRecent recentPost={recentPost} />}
-      {posts && <PostContainer posts={posts} />} */}
+      {recentPost && <MostRecent recentPost={recentPost} />}
+      {/* {posts && <PostContainer posts={posts} />} */}
     </div>
   );
 };

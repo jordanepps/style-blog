@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { urlFor } from '../lib/client';
 import PublishedDate from './PublishedDate';
 
@@ -9,26 +10,31 @@ const MostRecent = ({
   return (
     <div className="my-5">
       <h2 className="text-3xl font-display tracking-wide font-semibold my-9">
-        Most Recent Post
+        Most Recent Posts
       </h2>
-      <Link
-        href={`/post/${slug.current}`}
-        className="grid grid-cols-12 grid-rows-[repeat(7,_40px)] gap-2"
-      >
-        <div className="col-start-2 col-span-5 row-start-1 row-end-[6]">
-          <img
-            src={urlFor(mainImage.asset.url)}
-            alt="recent-post"
-            className="object-cover w-full max-h-full rounded"
-          />
-        </div>
-
-        <h4 className="font-display text-4xl col-start-7 col-span-3 row-span-2">
-          {title}
-        </h4>
-        <p className="font-body row-start-3 col-span-4 text-xl">{subText}</p>
-        <PublishedDate publishedAt={publishedAt} />
-      </Link>
+      <div className=" max-w-[350px] h-96 mx-auto mb-14">
+        <Link
+          href={`/post/${slug.current}`}
+          className=" cursor-pointer flex flex-col"
+        >
+          <div className="max-w-[350px] max-h-[250px]">
+            <img
+              src={urlFor(mainImage.asset.url)}
+              alt="recent-post"
+              className="block rounded max-w-[350px] max-h-[250px] h-auto w-auto"
+            />
+          </div>
+          <div>
+            <div className=" flex flex-row gap-8 items-center">
+              <h3 className="font-display text-2xl font-bold">{title}</h3>
+              <PublishedDate publishedAt={publishedAt} />
+            </div>
+            <div>
+              <p className="font-body ">{subText}</p>
+            </div>
+          </div>
+        </Link>
+      </div>
     </div>
   );
 };

@@ -3,23 +3,20 @@ import Link from 'next/link';
 import { urlFor } from '../lib/client';
 import PublishedDate from './PublishedDate';
 
-//TODO: Switch to next image
-
 const PostThumbnail = ({
   post: { title, slug, mainImage, publishedAt, subText },
 }) => {
-  console.log(mainImage);
   return (
-    <div className="flex max-w-[350px] h-96 mx-auto">
+    <div className="flex max-w-[350px] max-h-[384px] mx-auto ">
       <Link
         href={`/post/${slug.current}`}
         className=" cursor-pointer flex flex-col"
       >
-        <div className="max-w-[350px] max-h-[250px] overflow-hidden">
+        <div className="max-w-[350px] max-h-[250px] ">
           <img
             src={urlFor(mainImage.asset.url)}
             alt="post"
-            className="object-cover rounded"
+            className=" rounded max-w-[350px] max-h-[250px] "
           />
         </div>
         <div className=" flex flex-row gap-8 items-center">

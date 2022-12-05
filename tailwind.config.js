@@ -14,3 +14,5 @@ module.exports = {
   },
   plugins: [],
 };
+
+//TODO:Add theme to reduce typed out multi classes

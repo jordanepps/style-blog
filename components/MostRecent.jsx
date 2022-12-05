@@ -26,9 +26,7 @@ const MostRecent = ({
         <h4 className="font-display text-4xl col-start-7 col-span-3 row-span-2">
           {title}
         </h4>
-        <p className="font-body row-start-3 col-span-4 text-xl font-light">
-          {subText}
-        </p>
+        <p className="font-body row-start-3 col-span-4 text-xl">{subText}</p>
         <PublishedDate publishedAt={publishedAt} />
       </Link>
     </div>

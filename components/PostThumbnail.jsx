@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { urlFor } from '../lib/client';
 import PublishedDate from './PublishedDate';
 
+//TODO: Switch to next image
+
 const PostThumbnail = ({
   post: { title, slug, mainImage, publishedAt, subText },
 }) => {

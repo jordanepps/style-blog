@@ -1,11 +1,32 @@
 import React from 'react';
 import Link from 'next/link';
+import { urlFor } from '../lib/client';
+import PublishedDate from './PublishedDate';
 
-const PostThumbnail = ({ post }) => {
+const PostThumbnail = ({
+  post: { title, slug, mainImage, publishedAt, subText },
+}) => {
+  console.log(mainImage);
   return (
-    <div>
-      <Link href={`/post/${post.slug.current}`} className="cursor-pointer">
-        <h3 className="font-display">{post.title}</h3>
+    <div className="flex w-1/4 h-96">
+      <Link
+        href={`/post/${slug.current}`}
+        className=" cursor-pointer flex flex-col"
+      >
+        <div className="w-[350px] h-[250px] overflow-hidden">
+          <img
+            src={urlFor(mainImage.asset.url)}
+            alt="post"
+            className="object-cover rounded"
+          />
+        </div>
+        <div className=" flex flex-row gap-16 items-center mx-auto">
+          <h3 className="font-display text-3xl font-bold">{title}</h3>
+          <PublishedDate publishedAt={publishedAt} />
+        </div>
+        <div>
+          <p className="font-body ">{subText}</p>
+        </div>
       </Link>
     </div>
   );

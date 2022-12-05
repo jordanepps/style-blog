@@ -8,7 +8,7 @@ const HeroBanner = () => {
           <h1 className="text-6xl font-display tracking-widest font-semibold leading-tight">
             Where Creativity Meets Fashion?
           </h1>
-          <h3 className="text-2xl font-light mt-12 pr-1 leading-snug">
+          <h3 className="text-xl font-body font-light mt-12 pr-1 leading-snug">
             Is this a blog? I guess so. This text is really only here to fill
             out space. Here’s some more text. How does it look so far?
           </h3>

@@ -8,14 +8,14 @@ const MostRecent = ({
 }) => {
   return (
     <div className="my-5">
-      <h2 className="text-4xl font-display tracking-wide font-semibold pb-5">
+      <h2 className="text-3xl font-display tracking-wide font-semibold my-9">
         Most Recent Post
       </h2>
       <Link
         href={`/post/${slug.current}`}
-        className="grid grid-cols-12 grid-rows-[repeat(10,_40px)] gap-2"
+        className="grid grid-cols-12 grid-rows-[repeat(7,_40px)] gap-2"
       >
-        <div className="col-start-1 col-span-7 row-start-1 row-end-[7]">
+        <div className="col-start-2 col-span-5 row-start-1 row-end-[6]">
           <img
             src={urlFor(mainImage.asset.url)}
             alt="recent-post"
@@ -23,10 +23,10 @@ const MostRecent = ({
           />
         </div>
 
-        <h4 className="font-display text-4xl col-start-8 col-span-4 row-span-2">
+        <h4 className="font-display text-4xl col-start-7 col-span-3 row-span-2">
           {title}
         </h4>
-        <p className="font-body row-start-3 col-span-4 text-2xl font-light">
+        <p className="font-body row-start-3 col-span-4 text-xl font-light">
           {subText}
         </p>
         <PublishedDate publishedAt={publishedAt} />

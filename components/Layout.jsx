@@ -15,10 +15,10 @@ const Layout = ({ children }) => {
           <Navbar />
         </header>
         <main>{children}</main>
-        <footer>
-          <Footer />
-        </footer>
       </div>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 };

@@ -21,7 +21,7 @@ const PublishedDate = ({ publishedAt }) => {
   const publishedDay = ('0' + d.getDate()).slice(-2);
   const publishedYear = d.getFullYear().toString().slice(-2);
   return (
-    <div className="flex flex-col items-center font-display">
+    <div className="flex flex-col items-center font-display ml-auto">
       <span className="text-2xl font-medium">{publishedMonth}</span>
       <span className="text-xl -mt-1">{publishedDay}</span>
       <span className="text-lg -mt-1 font-light">{publishedYear}</span>

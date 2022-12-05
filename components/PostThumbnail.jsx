@@ -22,8 +22,8 @@ const PostThumbnail = ({
             className="object-cover rounded"
           />
         </div>
-        <div className=" flex flex-row gap-16 items-center mx-auto">
-          <h3 className="font-display text-3xl font-bold">{title}</h3>
+        <div className=" flex flex-row gap-8 items-center">
+          <h3 className="font-display text-2xl font-bold">{title}</h3>
           <PublishedDate publishedAt={publishedAt} />
         </div>
         <div>

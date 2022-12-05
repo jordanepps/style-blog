@@ -7,12 +7,12 @@ const Navbar = () => {
       <p className="text-3xl font-display tracking-widest">
         <Link href="/">The Style Blog</Link>
       </p>
-      <div className="flex gap-16 text-lg tracking-widest font-normal">
+      <div className="flex gap-6 lg:gap-16 text-lg tracking-widest font-normal">
         <p>
           <Link href="/">Posts</Link>
         </p>
         <p>
-          <Link href="/about">About</Link>
+          <Link href="/">About</Link>
         </p>
       </div>
     </div>

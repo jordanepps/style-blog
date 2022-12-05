@@ -6,7 +6,7 @@ const HeroBanner = () => {
     <>
       <div className="grid grid-cols-12 grid-rows-[repeat(11,_40px)] gap-2 mt-5">
         <div className="col-start-1 col-span-5 row-start-3 ">
-          <h1 className="text-6xl font-display tracking-widest font-semibold leading-tight">
+          <h1 className="lg:text-6xl font-display tracking-widest font-semibold lg:leading-tight md:text-4xl">
             Where Creativity Meets Fashion?
           </h1>
           <h3 className="text-xl font-body mt-12 pr-1 leading-snug">

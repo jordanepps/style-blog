@@ -10,12 +10,12 @@ const PostThumbnail = ({
 }) => {
   console.log(mainImage);
   return (
-    <div className="flex w-1/4 h-96">
+    <div className="flex max-w-[350px] h-96 mx-auto">
       <Link
         href={`/post/${slug.current}`}
         className=" cursor-pointer flex flex-col"
       >
-        <div className="w-[350px] h-[250px] overflow-hidden">
+        <div className="max-w-[350px] max-h-[250px] overflow-hidden">
           <img
             src={urlFor(mainImage.asset.url)}
             alt="post"

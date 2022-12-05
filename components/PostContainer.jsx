@@ -3,7 +3,7 @@ import PostThumbnail from './PostThumbnail';
 
 const PostContainer = ({ posts }) => {
   return (
-    <div className=" flex flex-wrap gap-y-14 mb-14 items-center">
+    <div className=" flex flex-wrap gap-y-14 mx-14 items-center">
       {posts?.map((post, i) => (
         <PostThumbnail post={post} key={post._id} />
       ))}

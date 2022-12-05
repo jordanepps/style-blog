@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { urlFor } from '../lib/client';
 import PublishedDate from './PublishedDate';
 
@@ -8,20 +7,20 @@ const MostRecent = ({
   recentPost: { title, slug, mainImage, publishedAt, subText },
 }) => {
   return (
-    <div className="my-5">
+    <div className="my-5 pb-1">
       <h2 className="text-3xl font-display tracking-wide font-semibold my-9">
         Most Recent Posts
       </h2>
-      <div className=" max-w-[350px] h-96 mx-auto mb-14">
+      <div className=" max-w-[350px] max-h-[385px] mx-auto mb-14 md:max-w-[650px]">
         <Link
           href={`/post/${slug.current}`}
-          className=" cursor-pointer flex flex-col"
+          className="rounded cursor-pointer flex flex-col md:flex-row gap-5 hover:shadow-xl hover:scale-110 ease-in duration-100"
         >
           <div className="max-w-[350px] max-h-[250px]">
             <img
               src={urlFor(mainImage.asset.url)}
-              alt="recent-post"
-              className="block rounded max-w-[350px] max-h-[250px] h-auto w-auto"
+              alt="post"
+              className="rounded max-w-[350px] max-h-[250px] h-auto w-auto"
             />
           </div>
           <div>
